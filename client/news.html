@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="e-library" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="namithesh" />
+    <meta http-equiv="refresh" content="60">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital@1&display=swap" rel="stylesheet"/> 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js"></script>
+    <title>news</title>
+  </head>
+
+  <body onload="check()">
+    <style>
+      body {
+        font-family: "Newsreader", serif;
+        font-size: larger;
+      }
+    </style>
+    <div id="news1"></div>
+
+    <script type="text/JavaScript">
+        function check(){
+          if (!window.navigator.onLine)
+          window.alert("Website is offline");
+        }
+
+        jQuery(function($) {
+        $("#news1").rss("https://news.google.com/news/rss/headlines/section/geo/india",  /*https://rss.msn.com/en-in*/
+        {
+          limit: 50,
+          support: false,
+         
+           });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>events</title>
+</head>
+
+<body>
+  <h1>events</h1>
+  <p></p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch("http://localhost:3000/event")
+        .then(response => response.json())
+        .then(data => sdata(data));
+    });
+
+    function sdata(data){
+       const par = document.querySelector("p"); 
+       par.innerHTML = data;
+    }
+  </script>
+</body>
+
+</html>

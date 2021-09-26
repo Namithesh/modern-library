@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- Line --><div class="main-content" style="margin-top:35px;padding-left:20px; padding-right:20px; padding-bottom:25px;">
+
+    <div class="fluid-container p-4">
+    <h1 class="display-3">All Feedback</h1>
+
+    <% if (data.length > 0) { %>
+        <div style="overflow-x:auto; padding:0px; margin-top: 25px;">
+            <table class="table table-striped table-light">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                    <% for (let i=0; i<data.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= i+1 %>
+                            </td>
+                            <td>
+                                <%=data[i].title%>
+                            </td>
+                            <td>
+                                <%=data[i].submitted_date%>
+                            </td>
+                            <td>
+                                <a href="/feedbacks/<%=data[i].id%>">View</a>
+                            </td>
+                        </tr>
+                            
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <% } else { %>
+        <div style="padding-bottom:200px; margin-top: 200px;">
+            No Feedbacks Given.
+            <hr>
+        </div>
+        <% } %>
+    <!-- </div> -->
+
+   
+    </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>

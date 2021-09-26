@@ -1,0 +1,111 @@
+/* div {
+    background-color: #F8F9FA;
+} */
+
+.pagination > li > a
+{
+    /* background-color: white; */
+    background-color: #F8F9FA;
+    color: #5A4181;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #5A4181 !Important;
+    border: solid 1px #5A4181 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #5A4181 !Important;
+    border: solid 1px #5A4181;
+}
+
+.pagination > .page-item > .page-link {
+    border-radius: 0;
+}
+
+.img-icon:hover > img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.main-content, nav, tbody, td, th, input[type="number"] {
+  background-color: #F8F9FA;
+}
+
+
+
+/* .form-control > input[type="number"] {
+    max-width: 150px;
+} */
+
+tr:hover, td:hover {
+    /* background-color: rgba(220, 224, 228, 0.1); */
+    background-color: #F4F5F8;
+}
+
+.button-link {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #808096;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  text-decoration: underline;
+}
+
+input[type="number"] {
+    /* background-color: rgba(221, 209, 38, 1); */
+    background-color: rgba(248, 249, 250, 0.952);
+    box-shadow: none;
+}
+
+input[type="number"]:focus {
+    background-color: rgba(248, 249, 250, 0.952);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    box-shadow: none;
+    border: 2px solid black;
+}
+
+input[type="number"]:hover {
+    background-color: rgba(248, 249, 250, 0.952);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    box-shadow: none;
+}
+
+/* .btn:hover, .btn:focus {
+    box-shadow: none;
+} */
+
+@media (max-width: 768px) {
+  .order-id-head {
+    font-size: 25px;
+  }
+
+
+}
+
+footer {
+  position: relative;
+  /* height: 2em; */
+  bottom: -100;
+  bottom: 0;
+  width:100%;
+}

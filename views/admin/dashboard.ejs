@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- START -->
+    <div class="container" style="margin-top: 75px;">
+        <div class="row">
+
+            <div class="col-md-3 cover">            
+            </div>
+
+            <div class="col-md-6">
+                <h1 class="display-3" style="text-align: center;">Book Transactions</h1>        
+            </div>  
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 cover">            
+            </div>
+
+            <div class="col-md-4">
+
+                <form action="/login" method="POST">
+                  <label for="name">NAME</label><br>
+                    <input class="form-control" type="text" id="name" name="name" required>
+                    <label for="roll_no">ROLL NO</label><br>
+                    <input class="form-control" type="number" id="roll_no" name="roll_no" required>
+                    <label for="book_name">BOOK NAME</label><br>
+                    <input class="form-control" type="text" id="book_name" name="book_name" required>
+                    <label for="date">DATE</label><br>
+                    <input class="form-control" type="date" id="date" name="date" required>
+                    <br>
+                    <input class="form-control btn-outline-dark" type="submit" value="CREATE BOOK TRANSACTIONS">
+                </form>
+                
+            </div>
+        </div>
+            
+
+    </div>
+    <!-- END -->
+
+<%- include('partials/footer.ejs') %>

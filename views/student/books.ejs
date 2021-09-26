@@ -1,0 +1,66 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- Line --><div class="main-content" style="margin-top:35px;padding-left:20px; padding-right:20px; padding-bottom:25px;">
+
+    <div class="fluid-container p-4">
+    <h1 class="display-3">Books</h1>
+
+        <div class="row">
+
+            <div class="col-md-4 cover">            
+            </div>
+
+            <form action="/books/search" method="POST">
+                <input class="form-control" type="text" id="search" name="search" value="<%=search%>" placeholder="Search For Books" required>
+                <input class="form-control btn-outline-dark" type="submit" value="SEARCH">
+            </form>
+
+        </div>
+
+    <% if (role === 'ADMIN') { %>
+        <a style="margin-bottom: 25px;" class="btn btn-outline-dark" href="/books/add">Add New Book</a>
+    <% } %>
+
+    <!-- START -->
+    <% if (data.length > 0) { %>
+        <div style="overflow-x:auto; padding:0px; margin-top: 25px;">
+            <table class="table table-striped table-light">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Book Title</th>
+                        <th>Upload Date</th>
+                        <th>Download</th>
+                    </tr>
+                    <% for (let i=0; i<data.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= i+1 %>
+                            </td>
+                            <td>
+                                <%=data[i].title%>
+                            </td>
+                            <td>
+                                <%=data[i].upload_date%>
+                            </td>
+                            <td>
+                                <a href="/<%=data[i].download_url%>" target="_blank">Link</a>
+                            </td>
+                        </tr>
+                            
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <% } else { %>
+        <div style="padding-bottom:200px; margin-top:200px">
+            No Results.
+            <hr>
+        </div>
+        <% } %>
+    <!-- END -->
+   
+    </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>

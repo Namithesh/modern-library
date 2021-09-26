@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- Line --><div class="main-content" style="margin-top:35px;padding-left:20px; padding-right:20px; padding-bottom:25px;">
+
+    <div class="fluid-container p-4">
+
+    <!-- <div class="col-md-3 cover"> -->
+    <div class="" style="margin-bottom: 25px;">
+        <a href="/<%=data.cover_image%>" target="_blank"><img style="object-fit: cover;" src="/<%=data.cover_image%>" width="100%" height="300px"/></a>    
+    </div>
+    <!-- </div> -->
+
+    <div class="row" style="margin-bottom: 40px;">
+
+        <div class="col-md-2 cover">            
+        </div>
+
+        <div class="col-md-8">
+
+            <h1 class="display-4"><%=data.title%></h1>
+
+            <!-- <form action="/feedbacks" method="POST"> -->
+                <label for="title">Published By</label><br>
+                <p><%=data.student_name%> on <%=data.published_date%></p>
+
+                <div class="form-group">
+                    <!-- <label for="data">Feedback</label> -->
+                    <pre><p style="padding: 10px; min-height: 100px;"><%=data.content%></p></pre>
+                </div>
+
+                <br>
+                <!-- <input class="form-control btn-outline-dark" type="submit" value="SUBMIT FEEDBACK"> -->
+            <!-- </form> -->
+            
+        </div>
+    </div>
+   
+    </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>

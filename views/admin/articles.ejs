@@ -1,0 +1,58 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- Line --><div class="main-content" style="margin-top:35px;padding-left:20px; padding-right:20px; padding-bottom:25px;">
+
+    <div class="fluid-container p-4">
+    <h1 class="display-3">View Articles</h1>
+
+    <% if (role === 'STUDENT') { %>
+        <a class="btn btn-outline-dark" href="/articles/add">Create Article</a>
+    <% } %>
+
+    <% if (data.length > 0) { %>
+        <div style="overflow-x:auto; padding:0px; margin-top: 25px;">
+            <table class="table table-striped table-light">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Student Name</th>
+                        <th>Published Date</th>
+                        <th>Action</th>
+                    </tr>
+                    <% for (let i=0; i<data.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= i+1 %>
+                            </td>
+                            <td>
+                                <%=data[i].title%>
+                            </td>
+                            <td>
+                                <%=data[i].student_name%>
+                            </td>
+                            <td>
+                                <%=data[i].published_date%>
+                            </td>
+                            <td>
+                                <a href="/articles/<%=data[i].article_id%>">View</a>
+                            </td>
+                        </tr>
+                            
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <% } else { %>
+        <div style="padding-bottom:100px; margin-top: 200px;">
+            No Articles Found.
+            <hr>
+        </div>
+        <% } %>
+    <!-- </div> -->
+
+   
+    </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>

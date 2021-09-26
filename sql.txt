@@ -1,0 +1,8 @@
+CREATE TABLE `event` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`text` VARCHAR(150),
+	`creation_date` DATETIME DEFAULT NOW(),
+	PRIMARY KEY (`id`)
+);
+
+
